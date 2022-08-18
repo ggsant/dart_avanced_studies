@@ -1,5 +1,4 @@
-import 'package:design_patterns_studies/strategy/animal/animal.dart';
-import 'package:flutter/material.dart';
+import 'animal/animal.dart';
 
 void main() {
   final Cat cat = Cat();

@@ -1,6 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:design_patterns_studies/strategy/movement_behavior/movement.dart';
-import 'package:design_patterns_studies/strategy/sound_behavior/sound.dart';
+import '../movement_behavior/movement.dart';
+import '../sound_behavior/sound.dart';
 
 abstract class Animal {
   late MovementBehavior _movementBehavior;
@@ -9,12 +8,10 @@ abstract class Animal {
   Animal();
 
   String performMovement() {
-    print(_movementBehavior.move());
     return _movementBehavior.move();
   }
 
   String performSound() {
-    print(_soundBehavior.makeSound());
     return _soundBehavior.makeSound();
   }
 }
