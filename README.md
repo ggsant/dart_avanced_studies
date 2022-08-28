@@ -1,10 +1,8 @@
-# design_patterns_studies
+# Design patterns studies
 
 ![image](https://user-images.githubusercontent.com/61892998/187052966-90b30b5f-a49c-4012-9254-0042f250baf4.png)
 
 ### Strategy
-
-![image](hhttps://miro.medium.com/max/1400/1*ztL8WCv8bdFPwEt1MRUpFg.jpeg)
 
 O padrão de Strategy é um padrão comportamental que permite selecionar um algoritmo em tempo de execução. Em vez de implementar um único algoritmo diretamente, podemos passar o algoritmo em tempo de execução de uma família de algoritmos.
 
@@ -39,7 +37,7 @@ Os elementos mais importantes na implementação desse padrão são:
 * A interface Strategy é comum a todas as estratégias concretas e declara o método que o contexto usa para executar uma estratégia.
 * O Concrete Strategies implementa diferentes variações de um algoritmo que o contexto usa.
 
-![image](hhttps://miro.medium.com/max/924/0*gdguPaUUWX73ZsOQ.png)
+![image](https://user-images.githubusercontent.com/61892998/187053940-7458814f-79e0-4cd6-bc23-53e92f1c7443.png)
 
 # Relações com outros padrões de design
 * A implementação do padrão Strategy é muito semelhante ao padrão State , esses padrões diferem apenas na finalidade de uso.
