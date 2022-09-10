@@ -1,22 +1,21 @@
 class Stock {
-  final StockTickerSymbol symbol;
-  final StockChangeDirection changeDirection;
   final double price;
-  final double changeAmount;
+  final StockTickerSymbol symbol;
+  final StockRecommendation recommendation;
 
   Stock({
-    required this.symbol,
-    required this.changeDirection,
     required this.price,
-    required this.changeAmount,
+    required this.symbol,
+    required this.recommendation,
   });
 }
 
 enum StockTickerSymbol { oibr3, mglu5, petr4 }
 
-enum StockChangeDirection {
-  falling,
-  growing,
+enum StockRecommendation {
+  buy,
+  sell,
+  neutral,
 }
 
 extension StockTickerSymbolExtension on StockTickerSymbol {
