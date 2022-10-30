@@ -56,10 +56,34 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "effective_dart",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/effective_dart-1.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "extra_pedantic",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/extra_pedantic-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "faker",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/faker-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "file",
       "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/file-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_lints",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "frontend_server_client",
@@ -96,6 +120,12 @@
       "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/js-0.6.4",
       "packageUri": "lib/",
       "languageVersion": "2.16"
+    },
+    {
+      "name": "lint",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/lint-1.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "lints",
@@ -158,6 +188,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "purple_lints",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/purple_lints-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "shelf",
       "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/shelf-1.3.2",
       "packageUri": "lib/",
@@ -210,6 +246,12 @@
       "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "strict_analyzer",
+      "rootUri": "file:///Users/gabrielasantos/.pub-cache/hosted/pub.dartlang.org/strict_analyzer-0.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.10"
     },
     {
       "name": "string_scanner",
@@ -284,7 +326,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-10-30T14:59:40.843717Z",
+  "generated": "2022-10-30T15:03:17.237157Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }
