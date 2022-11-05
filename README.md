@@ -1,95 +1,114 @@
-# Design patterns studies
 
-![image](https://user-images.githubusercontent.com/61892998/187052966-90b30b5f-a49c-4012-9254-0042f250baf4.png)
+![Logo](https://www.freecodecamp.org/news/content/images/2019/07/design-patterns-everywhere.jpg)
 
-# Strategy
-**Intenção**
-É um padrão de design comportamental que permite definir uma família de algoritmos, colocar cada um deles em uma classe separada e tornar seus objetos intercambiáveis.
 
-**Problema**
-O problema principal que o strategy tenta resolver, é diminuir o acoplamento entre classes bases de classes derivadas.
+# Design Patterns
 
-como isso ele acaba indo de encontro a um dos princípios do solid “principle open-closed”.
+Um tópico que pode facilmente fazer a mente de qualquer pessoa explodir. Aqui eu tento fazê-los ficar na sua mente (e talvez na minha), explicando-os da maneira mais simples possível.
 
-**Solução**
-Encapsule detalhes da interface em uma classe base e oculte detalhes da implementação em classes derivadas. Os clientss podem, então, se acoplar a uma interface e não precisam se modificados: com isso, nosso client não sofreria nenhum impacto quando o número de classes derivadas é alterado e nenhum impacto quando a implementação de uma classe derivada é alterada.
+### Introdução
+Padrões de projeto são soluções para problemas recorrentes; orientações sobre como lidar com determinados problemas . Eles não são classes, pacotes ou bibliotecas que você pode conectar em seu aplicativo e esperar que a mágica aconteça. Estas são, antes, orientações sobre como lidar com certos problemas em determinadas situações.
 
-**Implementação**
-O diagrama de classes UML para a implementação do Padrão de Design da Estratégia é apresentado abaixo:
+Padrões de projeto são soluções para problemas recorrentes; orientações sobre como lidar com certos problemas
 
-**Prós**
-Você pode trocar algoritmos usados ​​dentro de um objeto em tempo de execução.
-Você pode isolar os detalhes de implementação de um algoritmo do código que o utiliza.
-Você pode substituir herança por composição.
-Princípio Aberto / Fechado . Você pode introduzir novas estratégias sem precisar alterar o contexto.
+A Wikipedia os descreve como: Na engenharia de software, um padrão de projeto de software é uma solução geral reutilizável para um problema comum dentro de um determinado contexto no projeto de software. Não é um projeto acabado que pode ser transformado diretamente em código fonte ou máquina. É uma descrição ou modelo de como resolver um problema que pode ser usado em muitas situações diferentes.
 
-**Contras**
-Se você possui apenas alguns algoritmos e eles raramente mudam, não há motivo real para complicar demais o programa com novas classes e interfaces que acompanham o padrão.
-Os clientes devem estar cientes das diferenças entre as estratégias para poder selecionar uma adequada.
-Muitas linguagens de programação modernas têm suporte ao tipo funcional que permite implementar versões diferentes de um algoritmo dentro de um conjunto de funções anônimas. Então você poderia usar essas funções exatamente como usaria os objetos de estratégia, mas sem inchar seu código com classes e interfaces extras.
-# Observer
+### 🚫 Cuidado com a patternitite
 
-**Intenção**
-É um padrão de design comportamental que permite definir um mecanismo de assinatura para notificar vários objetos sobre quaisquer eventos que ocorram no objeto que estão observando.
+Patternitite é a arte de querer colocar um pattern em todo e qualquer lugar
 
-**Problema**
-Um grande projeto monolítico não se adapta bem à medida que novos requisitos de gráficos ou monitoramento são cobrados.
+* Padrões de design não são uma bala de prata para todos os seus problemas.
+* Não tente forçá-los; coisas ruins devem acontecer, se assim for.
+* Tenha em mente que os padrões de projeto são soluções para problemas, não soluções que encontram problemas; então não pense demais.
+* Se usados ​​no lugar correto de maneira correta, eles podem provar ser um salvador; ou então eles podem resultar em uma bagunça horrível de código.
 
-**Solução**
-Defina um objeto que seja o “guardião” do modelo de dados e / ou lógica de negócios (Subject). Delegue todas as funcionalidades de “ view” a objetos Observer dissociados e distintos. Os observers se registram no Subject à medida que são criados. Sempre que o Subject muda, transmite a todos os Observers registrados que ele mudou, e cada Observer consulta o Subject pelo subconjunto do estado do Subject que é responsável pelo monitoramento.
+### Tipos de padrões de design 
+* Criacional
+* Estrutural
+* Comportamental
 
-Isso permite que o número e o “type” de objetos “view” sejam configurados dinamicamente, em vez de serem especificados estaticamente em tempo de compilação.
+__Creational Patterns__:
 
-**Implementação**
-O diagrama de classes UML para a implementação do Observer Design Pattern é apresentado abaixo:
+| Pattern | Description |   Status |
+|:-------:| ----------- | ----------- |
+| [abstract_factory]() |  | |
+| [borg]() |  | |
+| [builder]() |  | |
+| [factory]()|  | |
+| [lazy_evaluation]() |  | |
+| [pool]() |  | |
+| [prototype]() | | |
 
-**Prós**
-Princípio Aberto / Fechado . Você pode introduzir novas classes de assinantes sem precisar alterar o código do editor (e vice-versa, se houver uma interface do editor).
-Você pode estabelecer relações entre objetos em tempo de execução.
+__Structural Patterns__:
 
-**Contras**
-Os assinantes são notificados em ordem aleatória.
+| Pattern | Description | Status |
+|:-------:| ----------- | ----------- |
+| [3-tier]() |  | |
+| [adapter]() |  | |
+| [bridge]() | | |
+| [composite]() |  | |
+| [decorator](https://refactoring.guru/pt-br/design-patterns/decorator) | O padrão Decorator permite alterar dinamicamente o comportamento de um objeto em tempo de execução, envolvendo-o em um objeto de uma classe decoradora. | ✔|
+| [facade]() |  | |
+| [flyweight]() | | |
+| [front_controller]() |  | |
+| [mvc]() |  | |
+| [proxy]() |  | |
 
-# Decorator
-**Intenção**
-O Decorator é um padrão de design estrutural que permite anexar novos comportamentos aos objetos, colocando-os dentro de objetos especiais do wrapper que contêm os comportamentos.
+__Behavioral Patterns__:
 
-**Problema**
-Você deseja adicionar comportamento ou estado a objetos individuais em tempo de execução. A herança não é viável porque é estática e se aplica a uma classe inteira.
+| Pattern | Description |   Status |
+|:-------:| ----------- | ----------- |
+| [chain_of_responsibility]() |  | |
+| [catalog]() | | |
+| [chaining_method]() |  | |
+| [command]() | | |
+| [iterator]() |  | |
+| [iterator]() |  | |
+| [mediator]() |  | |
+| [memento]() |  | |
+| [observer](https://refactoring.guru/pt-br/design-patterns/observer) | Define uma dependência entre objetos para que sempre que um objeto mudar de estado, todos os seus dependentes sejam notificados. | ✔|
+| [registry]() |  | |
+| [specification]() |  | |
+| [state]() |  | |
+| [strategy](https://refactoring.guru/pt-br/design-patterns/strategy) | O padrão strategy permite que você alterne o algoritmo ou a estratégia com base na situação. | ✔|
+| [template]() | | |
+| [visitor]() |  | |
 
-**Solução**
-Estender uma classe é a primeira coisa que vem à mente quando você precisa alterar o comportamento de um objeto. No entanto, a herança tem várias advertências sérias que você precisa estar ciente.
+__Design for Testability Patterns__:
 
-A herança é estática. Você não pode alterar o comportamento de um objeto existente no tempo de execução. Você só pode substituir o objeto inteiro por outro criado a partir de uma subclasse diferente.
-As subclasses podem ter apenas uma classe pai. Na maioria dos idiomas, a herança não permite que uma classe herde comportamentos de várias classes ao mesmo tempo.
-Uma das maneiras de superar essas advertências é usando Agregação ou Composição em vez de herança . Ambas as alternativas funcionam quase da mesma maneira: um objeto faz referência a outro e delega-lhe algum trabalho, enquanto que com a herança, o próprio objeto é capaz de fazer esse trabalho, herdando o comportamento de sua superclasse.
+| Pattern | Description |   Status |
+|:-------:| ----------- | ----------- |
+| [dependency_injection]() | | |
 
-Com essa nova abordagem, você pode facilmente substituir o objeto “auxiliar” vinculado por outro, alterando o comportamento do contêiner em tempo de execução. Um objeto pode usar o comportamento de várias classes, tendo referências a vários objetos e delegando a eles todos os tipos de trabalho. A agregação / composição é o princípio principal por trás de muitos padrões de design, incluindo o Decorator. Nessa nota, vamos voltar à discussão sobre padrões.
+__Fundamental Patterns__:
 
-**Implementação**
-O diagrama de classes UML para a implementação do padrão de design do decorador é apresentado abaixo:
+| Pattern | Description |   Status |
+|:-------:| ----------- | ----------- |
+| [delegation_pattern]() | | |
 
-As classes, interfaces e objetos no diagrama de classes UML acima são os seguintes:
+__Others__:
 
-Component
-Essa é uma interface que contém membros que serão implementados pela ConcreteClass e Decorator.
+| Pattern | Description |   Status |
+|:-------:| ----------- | ----------- |
+| [blackboard]() | | |
+| [graph_search]() |  | |
+| [hsm]() |  | |
 
-ConcreteComponent
-Esta é uma classe que implementa a interface do componente.
 
-Decorator
-Esta é uma classe abstrata que implementa a interface Component e contém a referência a uma instância Component. Essa classe também atua como classe base para todos os decoradores de componentes.
+## Stack utilizada
 
-ConcreteDecorator
-Esta é uma classe que herda da classe Decorator e fornece um decorador para componentes.
+* Dart
 
-**Prós**
-Você pode estender o comportamento de um objeto sem criar uma nova subclasse.
-Você pode adicionar ou remover responsabilidades de um objeto em tempo de execução.
-Você pode combinar vários comportamentos envolvendo um objeto em vários decoradores.
-Princípio de responsabilidade única . Você pode dividir uma classe monolítica que implementa muitas variantes possíveis de comportamento em várias classes menores.
 
-**Contras**
-É difícil remover um invólucro específico da pilha de invólucros.
-É difícil implementar um decorador de forma que seu comportamento não dependa da ordem na pilha de decoradores.
-O código de configuração inicial das camadas pode parecer bastante feio.
+## 🚀 Sobre mim
+I've been working with mobile development for Android and Ios since 2020 using Flutter as a framework. In addition to flutter, I have been venturing into development with native technologies, specifically Kotlin and Swift programming languages. 
+Professionally, I participated in the development of projects with different range of applications, going from marketplaces, budget management, up to condominium management. 
+Currently, I am working on an application focused on a stock exchange application. 
+I consider myself resilient, responsible, and dedicated. I'm always willing to learn, and add value to every team that I have had the opportunity to work with.
+I also like to teach whenever possible. I have given lectures at events about mobile in general, such as The Developer Conference (TDC) and some Google Developer Groups (GDG's). Giving back to the community is is important to me, so I coordinate a Flutter group of studies for women called Flutter Girls.
+
+Eu trabalho com desenvolvimento mobile para Android e Ios desde 2020 utilizando Flutter como framework. Participei do desenvolvimento de aplicativos com diferentes propósitos, como marketplaces, gestão de gastos, gestão de condomínios, entre outros. Atualmente eu trabalho em um aplicativo focado em operações trader. Atualmente além do flutter, eu tenho me aventurado no desenvolvimento com Kotlin e Swift. Me considero resiliente, responsável, e dedicada, e sempre disposta a aprender, ensinar, e agregar a cada time que eu tenha a oportunidade de trabalhar.
+Além disso, eu sou palestrante. eu ja palestrei no The Developer Conference (TDC), em alguns GDG's, etc. Eu também sou coordenadora de uma comunidade feminina para estudos sobre Flutter, chamada Flutter Girls. 
+
+
+
