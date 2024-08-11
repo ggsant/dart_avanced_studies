@@ -1,19 +1,33 @@
-import 'package:patterns/strategy/animal/animal.dart';
+import 'package:patterns/strategy/transport_strategy.dart';
 
 void main() {
-  final Cat cat = Cat();
-  cat.performMovement();
-  cat.performSound();
+  final reservationSystem = ReservationSystem();
 
-  final Dog dog = Dog();
-  dog.performMovement();
-  dog.performSound();
+  reservationSystem.addReservation(
+    transport: Transport.airplane,
+    ticketID: "A123",
+    passengerName: "Gabriela Santos",
+    origin: State.alagoas,
+    destination: State.saoPaulo,
+  );
+  reservationSystem.addReservation(
+    transport: Transport.train,
+    ticketID: "T456",
+    passengerName: "Rafaela Aparecida",
+    origin: State.ceara,
+    destination: State.rioDeJaneiro,
+  );
+  reservationSystem.addReservation(
+    transport: Transport.bus,
+    ticketID: "B789",
+    passengerName: "Guilherme Lopes",
+    origin: State.bahia,
+    destination: State.minasGerais,
+  );
 
-  final Duck duck = Duck();
-  duck.performMovement();
-  duck.performSound();
+  print("\nList all reservations:");
+  reservationSystem.listAllReservations();
 
-  final Snake snake = Snake();
-  snake.performMovement();
-  snake.performSound();
+  print("\nSearch for airplane reservations:");
+  reservationSystem.searchReservations(Transport.airplane);
 }
